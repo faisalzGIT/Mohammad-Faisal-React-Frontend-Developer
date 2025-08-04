@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# 🛒 iShop - Themed Shopping App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive shopping app built with **React**, **TypeScript**, and **Tailwind CSS**, featuring dynamic multi-theme support. The app fetches product data from an external API and offers a seamless user experience with layout responsiveness and animated transitions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🎨 3 Switchable Themes (Light, Dark, Playful)
+- ⚡ React + TypeScript
+- 💨 Tailwind CSS for styling
+- 🧠 Context API for theme management
+- 🧩 Modular component structure
+- 📱 Fully responsive design (mobile-first)
+- 🌐 External API integration (`https://fakestoreapi.com/`)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Routing**: React Router DOM
+- **State Management**: React Context API
+- **API**: `https://fakestoreapi.com/`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📂 Folder Structure
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+│
+├── Components/        # Reusable UI components (Navbar, Footer, ProductCard, etc.)
+├── Context/           # ThemeContext using React Context API
+├── Pages/             # Page components (Home, About, etc.)
+├── Types/             # TypeScript types (e.g., Product type)
+├── utils/             # ThemeClasses.ts (CSS classes per theme)
+├── App.tsx            # App entry point with routing
+├── main.tsx           # Root renderer
+└── index.css          # Tailwind CSS imports
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 💾 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/faisalzGIT/Mohammad-Faisal-React-Frontend-Developer
+cd ishop-theme-app
+````
+
+### 2. Install Dependencies
+
+Make sure you have **Node.js v16+** installed.
+
+```bash
+npm install
 ```
+
+### 3. Start Development Server
+
+```bash
+npm run dev
+```
+
+Visit your localhost
+
+---
+
+## 🌈 Theme Switching
+
+* Theme is managed using **React Context API**.
+* It persists the selected theme using **localStorage**.
+* Themes are defined in `src/utils/ThemeClasses.ts`.
+
+### Available Themes
+
+| Theme   | Description                          |
+| ------- | ------------------------------------ |
+| Theme 1 | Default Light Theme                  |
+| Theme 2 | Dark / Minimalist Theme              |
+| Theme 3 | Colorful Theme using `Pacifico` font |
+
+---
+
+## 🧪 API Used
+
+All products are fetched from:
+
+```
+https://fakestoreapi.com/products
+```
+
+---
+
+## ✍️ Author
+
+* Developed by **Faisal** — [Portfolio](https://faisalzportfolio.netlify.app)
+
+---
