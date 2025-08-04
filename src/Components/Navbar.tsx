@@ -28,8 +28,8 @@ function Navbar() {
         <div className={clsx("text-sm md:text-base flex gap-3 md:gap-5", current.navText)}>
           <Link to="/" className={clsx("transition-all duration-500", current.navText)}>Home</Link>
           <Link  to="https://faisalzportfolio.netlify.app/" className={clsx("transition-all duration-500", current.navText)}>Developer</Link>
-          <Link to="/" className={clsx("transition-all duration-500", current.navText)}>Contact</Link>
-          <Link to="/" className={clsx("transition-all duration-500", current.navText)}>About</Link>
+          <Link to="/contact" className={clsx("transition-all duration-500", current.navText)}>Contact</Link>
+          <Link to="/about" className={clsx("transition-all duration-500", current.navText)}>About</Link>
         </div>
 
         {/* Theme Switcher */}
